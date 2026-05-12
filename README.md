@@ -1,7 +1,7 @@
-README FROM VirtualHook 
+VirtualHook 
 -----------
 
-## Introduction 
+## Introduction - THIS README FROM VIRTUALHOOK FILES, not created by the creator of this repo
 
 VirtualHook is a tool for hooking application without root permission. It is based on two projects:
 
