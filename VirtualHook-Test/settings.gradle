@@ -1,0 +1,11 @@
+include ':lib', ':app', ':YAHFA', ':demoHookPlugin' //, ':SwitchButton'
+//
+//dependencyResolutionManagement {
+//    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)//FAIL_ON_PROJECT_REPOS)
+//    repositories {
+//        google()
+//        mavenCentral()
+//        maven { url 'https://jitpack.io/' } // <- here we go
+//        //jcenter()
+//    }
+//}

@@ -1,0 +1,72 @@
+apply plugin: 'com.android.application'
+
+
+android {
+    buildToolsVersion '29.0.2'
+    defaultConfig {
+        applicationId "io.virtualhook"
+        minSdkVersion 21
+        targetSdkVersion 26
+        versionCode 23
+        versionName "1.2.5"
+        android {
+            defaultConfig {
+                ndk {
+                    abiFilters "armeabi-v7a", "x86"
+                }
+            }
+        }
+    }
+
+    sourceSets {
+        main{
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+}
+
+android {
+    compileSdk 30
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation project(':lib')
+    //Android Lib
+    implementation 'com.android.support:appcompat-v7:25.4.0'
+    implementation 'com.melnykov:floatingactionbutton:1.3.0'
+    implementation 'com.android.support:recyclerview-v7:25.4.0'
+    implementation 'com.android.support:percent:25.4.0'
+    implementation 'com.android.support:design:25.4.0'
+    implementation 'com.android.support:cardview-v7:25.4.0'
+    //Promise Support
+    //implementation 'org.jdeferred:jdeferred-android-aar:1.2.4'
+    // ThirdParty
+    //implementation 'com.jonathanfinerty.once:once:1.3.1'//1.0.3'
+    implementation 'com.jonathanfinerty:once:1.0.3'
+    implementation 'org.jdeferred:jdeferred-android-aar:1.2.6'
+
+    //implementation 'com.github.jonfinerty:Once:a59ba9e' //10 //8
+
+
+    //implementation project(':SwitchButton')
+    //implementation 'com.github.kyleduo:switchbutton:3c68a3b84ed2c66560ca7111da70b0128a5e3039'
+    //implementation 'com.github.kyleduo.switchbutton:library:1.4.6'
+    //com.kyleduo.switchbutton:library:1.4.6
+}

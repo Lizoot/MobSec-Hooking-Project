@@ -1,0 +1,4 @@
+before_install:
+  - sed -i 's/jcenter()/mavenCentral()/g' build.gradle #ok it work!
+  - sed -i '/com.jfrog.bintray.gradle/d' build.gradle #it work!
+  - sed -i '/com.jfrog.bintray/d' once/build.gradle #
